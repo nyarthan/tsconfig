@@ -1,0 +1,33 @@
+{
+  "$schema": "https://www.schemastore.org/tsconfig.json",
+  "compilerOptions": {
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitOverride": true,
+
+    /* Compiler Stuff */
+    "declarationMap": true,
+    "isolatedDeclarations": true,
+    "noEmit": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "isolatedModules": true,
+
+    /* Target */
+    "lib": ["ESNext"],
+    "target": "esnext",
+
+    /* Syntax */
+    "erasableSyntaxOnly": true,
+    "allowImportingTsExtensions": true,
+
+    /* Other Stuff? */
+    "composite": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "verbatimModuleSyntax": true
+  }
+}

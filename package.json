@@ -1,0 +1,31 @@
+{
+  "name": "@nyarthan/tsconfig",
+  "version": "0.1.0",
+  "author": "Jannis Morgenstern <jannis.n.morgenstern@gmail.com> (https://github.com/nyarthan)",
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "tsconfig"
+  ],
+  "homepage": "https://github.com/nyarthan/tsconfig?tab=readme-ov-file",
+  "repository": "github:nyarthan/tsconfig",
+  "bugs": "https://github.com/nyarthan/tsconfig/issues",
+  "packageManager": "pnpm@10.15.1",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.9.0",
+      "onFail": "error"
+    }
+  },
+  "type": "module",
+  "exports": {
+    "./dom": "./src/dom.json",
+    "./no-dom": "./src/no-dom.json"
+  },
+  "devDependencies": {
+    "biome": "^0.3.3",
+    "husky": "^9.1.7",
+    "nano-staged": "^0.9.0"
+  }
+}
