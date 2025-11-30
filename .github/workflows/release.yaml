@@ -34,7 +34,7 @@ jobs:
         uses: "changesets/action@v1.5.3"
         with:
           version: |
-            nix develop #.ci --command pnpm changeset version
+            nix develop --command pnpm changeset version
           title: "release: publish package to npm"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
