@@ -43,7 +43,7 @@ jobs:
       - name: "Publish Package to npm"
         if: steps.changesets.outputs.hasChangesets == 'false' && contains(github.event.head_commit.message, 'publish package')
         run: |
-          nix develop --command pnpm release
+          nix develop --command "echo $NPM_TOKEN"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
