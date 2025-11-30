@@ -1,6 +1,6 @@
 {
   "name": "@nyarthan/tsconfig",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "author": "Jannis Morgenstern <jannis.n.morgenstern@gmail.com> (https://github.com/nyarthan)",
   "license": "MIT",
   "keywords": [
@@ -23,12 +23,16 @@
     "format:check": "biome check",
     "release": "pnpm publish --access public --provenance"
   },
+  "files": [
+    "./src"
+  ],
   "type": "module",
   "exports": {
     "./dom": "./src/dom.json",
     "./no-dom": "./src/no-dom.json"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.8",
     "biome": "0.3.3",
     "husky": "9.1.7",
     "nano-staged": "0.9.0"

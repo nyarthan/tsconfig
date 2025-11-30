@@ -1,0 +1,32 @@
+name: "CI"
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+  workflow_dispatch:
+
+env:
+  FORCE_COLOR: "3"
+
+concurrency: "${{ github.workflow }}-${{ github.ref }}"
+
+jobs:
+  format:
+    name: "Check Format"
+    runs-on: "ubuntu-22.04-arm"
+    steps:
+      - name: "Checkout Repository"
+        uses: "actions/checkout@v5"
+
+      - name: "Setup Nix Environment"
+        uses: "./.github/actions/setup-nix"
+
+      - name: "Install Dependencies"
+        run: |
+          nix develop --command pnpm install --frozen-lockfile
+
+      - name: "Check Format"
+        run: |
+          nix develop --command pnpm format:check
